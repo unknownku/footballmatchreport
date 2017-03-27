@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+     <!--   <property name = "hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name = "hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+        <property name="hibernate.dialect_resolvers" value="com.advdb.footballclub.dialect.ScopeStandardDialectResolver" />
+        <property name = "hibernate.connection.driver_class" value = "com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name = "hibernate.connection.url" value = "jdbc:sqlserver://localhost;databaseName=cust;instanceName=SQLEXPRESS;"/>
+        <property name = "hibernate.connection.username" value = "sa"/>
+        <property name = "hibernate.connection.password" value = ""/>
+        <property name = "hibernate.show_sql" value="true"/>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <property name = "hibernate.jdbc.batch_size">1000</property>
+        <mapping class = "com.advdb.footballclub.domain.FactMatch"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimCompetition"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimDate"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimOpponent"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimPlayer"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimSeat"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimTactic"></mapping>
+     -->
+    
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/batch</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">password</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">false</property>
+        <property name="jdbc.batch_size">1000</property>
+        <mapping class="com.advdb.footballclub.domain.FactMatch"></mapping>
+        <mapping class="com.advdb.footballclub.domain.DimCompetition"></mapping>
+        <mapping class="com.advdb.footballclub.domain.DimTactic"></mapping>
+        <mapping class="com.advdb.footballclub.domain.DimDate"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimOpponent"></mapping>
+        <mapping class = "com.advdb.footballclub.domain.DimPlayer"></mapping>
+    <!--    
+        <mapping class = "com.advdb.footballclub.domain.DimSeat"></mapping>
+    -->
+    
+    </session-factory>
+</hibernate-configuration>
